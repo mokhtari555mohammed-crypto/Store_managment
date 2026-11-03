@@ -1,23 +1,46 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>تسيير المحل</title><style>
-:root{--bg:#f3f1ec;--cd:#fff;--tx:#1f2a2e;--mu:#68757a;--pr:#0b6e5f;--bd:#dedad0;--dg:#b3382c}
-[data-t=dark]{--bg:#141a1c;--cd:#1e2629;--tx:#e8eeee;--mu:#97a6a9;--bd:#2f3b3f;--pr:#3dd0b6;--dg:#ff7a6b}
-*{box-sizing:border-box}body{margin:0;font:15px/1.5 Tahoma,"Segoe UI",sans-serif;background:var(--bg);color:var(--tx);display:flex;min-height:100vh}
-nav{width:180px;background:var(--cd);border-inline-end:1px solid var(--bd);padding:10px;flex:none}nav b{display:block;padding:8px;color:var(--pr)}
-nav a{display:block;padding:9px 10px;border-radius:6px;cursor:pointer}nav a.on{background:var(--pr);color:#fff}
-main{flex:1;padding:14px;min-width:0}h2{margin:0 0 12px}.cd{background:var(--cd);border:1px solid var(--bd);border-radius:8px;padding:12px}
-.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:12px}.g .cd small{color:var(--mu);display:block}.g .cd strong{font-size:17px}
-.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;background:var(--cd)}th,td{padding:7px 8px;border-bottom:1px solid var(--bd);text-align:start;white-space:nowrap}th{color:var(--mu);font-weight:600}
-input,select{width:100%;padding:8px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--tx);font:inherit}label{display:block;margin:6px 0}
-.b{background:var(--pr);color:#fff;border:0;padding:8px 14px;border-radius:6px;cursor:pointer;font:inherit}.b.g2{background:none;color:var(--tx);border:1px solid var(--bd)}.b.r{background:var(--dg)}.s{padding:3px 8px;font-size:13px;margin:1px}
-.pos{display:grid;grid-template-columns:1fr 1fr;gap:12px}.pl{max-height:60vh;overflow:auto;margin-top:8px}.pl div{padding:8px;border-bottom:1px solid var(--bd);cursor:pointer;display:flex;justify-content:space-between}
-.em{color:var(--mu);text-align:center;padding:18px}.low{color:var(--dg);font-weight:700}.ck input{width:auto}.bar{display:flex;gap:6px;align-items:flex-end;height:110px}.bar i{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;font-size:11px;font-style:normal;gap:2px;height:100%}.bar u{width:100%;background:var(--pr);border-radius:3px 3px 0 0;min-height:2px}
-dialog{border:1px solid var(--bd);border-radius:10px;background:var(--cd);color:var(--tx);width:min(420px,94vw)}.row{display:flex;gap:8px;margin-top:10px}.row .b{flex:1}
-#toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--pr);color:#fff;padding:9px 16px;border-radius:8px;display:none;z-index:9}#toast.er{background:var(--dg)}#toast.show{display:block}
-#print{display:none}.bar2{margin:8px 0;display:flex;gap:6px;flex-wrap:wrap}.th{width:34px;height:34px;object-fit:cover;border-radius:5px;vertical-align:middle;margin-inline-end:6px}.chips{display:flex;gap:6px;overflow-x:auto;margin:8px 0}.chips a{padding:4px 12px;border:1px solid var(--bd);border-radius:99px;cursor:pointer;white-space:nowrap;background:var(--cd)}.chips a.on{background:var(--pr);color:#fff;border-color:var(--pr)}
-@media(max-width:760px){body{flex-direction:column}nav{width:auto;display:flex;overflow-x:auto;padding:6px;border:0;border-bottom:1px solid var(--bd)}nav b{display:none}nav a{white-space:nowrap}.pos{grid-template-columns:1fr}}
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>تسيير المحل</title><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet"><style>:root{--bg:#F7F8FA;--cd:#fff;--tx:#151B2B;--mu:#9299A5;--pr:#2863E9;--pl:#EAF1FF;--bd:#EDEFF3;--dg:#E5484D;--ok:#219B62;--sh:0 4px 20px rgba(21,27,43,.06)}
+[data-t=dark]{--bg:#0E1320;--cd:#171E2E;--tx:#EEF1F7;--mu:#8A93A6;--pl:#1E2A48;--bd:#262F44;--pr:#5B8CFF;--sh:0 4px 20px rgba(0,0,0,.35)}
+*{box-sizing:border-box}body{margin:0;font:15px/1.6 Cairo,Tajawal,"Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--tx);display:flex;min-height:100vh}
+nav{width:220px;background:var(--cd);margin:12px;padding:14px 10px;border-radius:22px;box-shadow:var(--sh);flex:none;align-self:flex-start;position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}
+nav b{display:block;padding:6px 10px 2px;font-size:18px;font-weight:800;color:var(--pr)}#licst{display:block;font-size:12px;margin-bottom:8px}
+nav a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;cursor:pointer;color:var(--mu);font-weight:600}nav a i{font-style:normal;font-size:18px;width:26px;text-align:center}
+nav a.on{background:var(--pr);color:#fff;box-shadow:0 6px 16px rgba(40,99,233,.3)}
+main{flex:1;padding:20px 16px;min-width:0}h2{margin:0 0 14px;font-size:24px;font-weight:800}h3{font-weight:700}
+.cd{background:var(--cd);border-radius:20px;padding:16px;box-shadow:var(--sh)}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:12px;margin-bottom:14px}
+.g .cd{display:grid;grid-template-columns:44px 1fr;gap:0 12px;align-items:center}.g .cd::before{grid-row:1/3;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:20px;background:var(--pl)}
+.g .cd:nth-child(12n+1)::before{content:'💵'}.g .cd:nth-child(12n+2)::before{content:'📅'}.g .cd:nth-child(12n+3)::before{content:'📈'}.g .cd:nth-child(12n+4)::before{content:'💸'}.g .cd:nth-child(12n+5)::before{content:'🚚'}.g .cd:nth-child(12n+6)::before{content:'📦'}.g .cd:nth-child(12n+7)::before{content:'🏷️'}.g .cd:nth-child(12n+8)::before{content:'⚠️'}.g .cd:nth-child(12n+9)::before{content:'🧾'}.g .cd:nth-child(12n+10)::before{content:'👥'}.g .cd:nth-child(12n+11)::before{content:'🏭'}.g .cd:nth-child(12n+12)::before{content:'🏦'}.g .cd:nth-child(3n+1)::before{background:#EAF1FF}.g .cd:nth-child(3n+2)::before{background:#E6F6EE}.g .cd:nth-child(3n)::before{background:#FFF3E0}
+.g .cd small{color:var(--mu);font-size:12px}.g .cd strong{font-size:18px;font-weight:800}
+.tw{overflow-x:auto;background:var(--cd);border-radius:20px;padding:6px 10px;box-shadow:var(--sh)}
+table{width:100%;border-collapse:collapse;background:none}th,td{padding:10px;border-bottom:1px solid var(--bd);text-align:start;white-space:nowrap}th{color:var(--mu);font-size:12px;font-weight:700}tr:last-child td{border-bottom:0}
+input,select{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:12px;background:var(--bg);color:var(--tx);font:inherit;min-height:44px}input:focus,select:focus{outline:2px solid var(--pr);border-color:transparent}
+label{display:block;margin:8px 0;color:var(--mu);font-size:13px;font-weight:600}label input,label select{margin-top:4px;color:var(--tx);font-size:15px}
+.b{background:var(--pr);color:#fff;border:0;padding:10px 18px;min-height:44px;border-radius:14px;cursor:pointer;font:inherit;font-weight:700;box-shadow:0 6px 16px rgba(40,99,233,.25)}.b.g2{background:var(--cd);color:var(--tx);border:1px solid var(--bd);box-shadow:none}.b.r{background:var(--dg);box-shadow:0 6px 16px rgba(229,72,77,.25)}.s{padding:3px 10px;min-height:32px;font-size:13px;margin:2px;border-radius:10px;box-shadow:none}
+.pos{display:grid;grid-template-columns:1fr 1fr;gap:14px}.pl{max-height:60vh;overflow:auto;margin-top:10px;padding:4px 12px}.pl div{padding:10px 2px;border-bottom:1px solid var(--bd);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.em{color:var(--mu);text-align:center;padding:22px}.low{color:var(--dg);font-weight:700}.ck input{width:auto;min-height:0}
+.bar{display:flex;gap:8px;align-items:flex-end;height:120px}.bar i{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;font-size:11px;color:var(--mu);font-style:normal;gap:3px;height:100%}.bar u{width:100%;background:var(--pr);border-radius:8px 8px 0 0;min-height:3px}
+dialog{border:0;border-radius:24px;background:var(--cd);color:var(--tx);width:min(440px,94vw);box-shadow:0 20px 60px rgba(21,27,43,.25);padding:20px}dialog::backdrop{background:rgba(21,27,43,.45)}.row{display:flex;gap:8px;margin-top:12px}.row .b{flex:1}
+#toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:var(--ok);color:#fff;padding:10px 18px;border-radius:14px;display:none;z-index:99;box-shadow:var(--sh)}#toast.er{background:var(--dg)}#toast.show{display:block}
+#print{display:none}.bar2{margin:10px 0;display:flex;gap:8px;flex-wrap:wrap;align-items:center}.th{width:36px;height:36px;object-fit:cover;border-radius:10px;vertical-align:middle;margin-inline-end:8px}
+.chips{display:flex;gap:8px;overflow-x:auto;margin:10px 0}.chips a{padding:6px 14px;border-radius:99px;cursor:pointer;white-space:nowrap;background:var(--cd);color:var(--mu);box-shadow:var(--sh);font-weight:600}.chips a.on{background:var(--pr);color:#fff}
+@media(max-width:760px){body{flex-direction:column}nav{position:fixed;inset:auto 0 0 0;width:auto;margin:0;max-height:none;top:auto;display:flex;flex-direction:row;overflow-x:auto;padding:6px 6px calc(6px + env(safe-area-inset-bottom));border-radius:20px 20px 0 0;box-shadow:0 -4px 20px rgba(21,27,43,.1);z-index:20}
+nav b{display:none}#licst{position:fixed;top:6px;left:8px;background:var(--cd);padding:1px 10px;border-radius:99px;box-shadow:var(--sh);margin:0;z-index:5}nav a{flex:1 0 66px;flex-direction:column;gap:0;font-size:11px;padding:6px 4px;white-space:nowrap}nav a i{font-size:20px;filter:grayscale(1) opacity(.65)}nav a.on{background:var(--pl);color:var(--pr);box-shadow:none}nav a.on i{filter:none}
+main{padding:34px 12px 96px}.pos{grid-template-columns:1fr}.g{grid-template-columns:repeat(2,1fr)}}
+#more{display:none}img{max-width:100%}.pos>*{min-width:0}.g .cd strong{overflow-wrap:anywhere}
+@media(min-width:761px) and (max-width:1024px){nav{width:88px;padding:10px 4px}nav b{font-size:12px;text-align:center;padding:4px 0}#licst{font-size:10px;text-align:center;padding:0}nav a{flex-direction:column;gap:0;font-size:11px;padding:8px 2px;text-align:center}.pos{grid-template-columns:1fr}}
+@media(max-width:760px){html,body{overflow-x:hidden}h2{font-size:20px}
+nav{overflow:visible;flex-wrap:wrap;padding-inline:4px}#more{display:flex}#nav a:nth-child(n+4):not(:nth-child(5)){display:none}nav.open #nav a{display:flex!important}nav a{flex:1 0 22%!important;min-height:52px}
+nav:not(.open) a{flex:1 0 0!important}#licst{top:calc(6px + env(safe-area-inset-top))}main{padding:calc(36px + env(safe-area-inset-top)) 12px calc(96px + env(safe-area-inset-bottom))}
+input,select{font-size:16px;min-height:48px}.b{min-height:48px}.s{min-height:40px;padding:4px 12px}.bar2 input,.bar2 select{max-width:none!important;flex:1 1 100%}.bar2 .b{flex:1 1 auto}
+.g{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.g .cd{grid-template-columns:1fr;padding:12px}.g .cd::before{grid-row:auto;width:36px;height:36px;margin-bottom:6px}.g .cd strong{font-size:clamp(15px,4.6vw,18px)}
+td{white-space:normal}.tw{padding:4px;background:none;box-shadow:none;overflow:visible}
+table.rt,table.rt tbody{display:block}table.rt tr:first-child{display:none}table.rt tr{display:block;background:var(--cd);border-radius:18px;box-shadow:var(--sh);padding:8px 12px;margin-bottom:10px}
+table.rt td{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border:0;text-align:end}table.rt td::before{content:attr(data-l);color:var(--mu);font-size:12px;font-weight:700;text-align:start;flex:none}table.rt td:last-child{justify-content:flex-start;flex-wrap:wrap;gap:6px}table.rt td:last-child::before{display:none}
+dialog{width:100%;max-width:100%;margin:auto 0 0;border-radius:24px 24px 0 0;max-height:90vh;max-height:90dvh;overflow:auto;padding:18px 16px calc(18px + env(safe-area-inset-bottom))}#toast{max-width:90vw;bottom:calc(96px + env(safe-area-inset-bottom))}}
+@media(max-width:340px){.g{grid-template-columns:1fr}}
 @media print{body>*{display:none!important}body:not(.rp)>#print{display:block!important;padding:10px;color:#000}body.rp>main{display:block!important}#print table,main table{background:none;color:#000}.bar2,.chips{display:none!important}}
 </style></head><body>
-<nav><b id="shopn">🏪 المحل</b><small id="licst" style="padding:0 8px;color:var(--mu)"></small><div id="nav" style="display:contents"></div></nav><main id="main"></main><dialog id="dlg"></dialog><div id="toast"></div><div id="print"></div>
+<nav><b id="shopn">🏪 المحل</b><small id="licst" style="padding:0 8px;color:var(--mu)"></small><div id="nav" style="display:contents"></div><a id="more" onclick="this.closest('nav').classList.toggle('open')"><i>☰</i><span>المزيد</span></a></nav><main id="main"></main><dialog id="dlg"></dialog><div id="toast"></div><div id="print"></div>
 <script>
 'use strict';
 // ===== أدوات عامة =====
@@ -38,6 +61,7 @@ const shrink=f=>new Promise((res,rej)=>{if(!f.type.startsWith('image/'))return r
 const im=p=>p.img&&p.img.startsWith('data:image/')?`<img class="th" src="${E(p.img)}" alt="">`:'';
 const gList=()=>[...new Set((cfg.groups||[]).concat(D.products.map(p=>p.cat)))].filter(Boolean).sort();
 const chips=(cur,fn)=>`<div class="chips"><a class="${cur?'':'on'}" onclick="${fn}('')">الكل</a>${gList().map(g=>`<a class="${cur==g?'on':''}" onclick="${fn}(this.textContent)">${E(g)}</a>`).join('')}</div>`;
+const NI={dash:'🏠',pos:'🛒',products:'📦',moves:'🔄',sales:'🧾',purchases:'🚚',customers:'👥',suppliers:'🏭',expenses:'💸',cash:'🏦',reports:'📊',settings:'⚙️'};
 const MT=[['cash','نقدًا'],['transfer','تحويل'],['card','بطاقة'],['other','أخرى']];
 const SO={name:(x,y)=>x.name.localeCompare(y.name,'ar'),sell:(x,y)=>y.sell-x.sell,qty:(x,y)=>x.qty-y.qty,profit:(x,y)=>(y.sell-y.buy)-(x.sell-x.buy)};
 function toast(m,e){const t=$('#toast');t.textContent=m;t.className=e?'er show':'show';clearTimeout(toast.h);toast.h=setTimeout(()=>t.className='',3200)}
@@ -181,10 +205,12 @@ if(LH.has(h)){LW({t:'full',h,at:n});return}if(h==TH){if(l)throw Error('الكو�
 function gate(){return new Promise(res=>{const i=licInfo();if(i.ok)return res();const g=document.createElement('div');g.id='gate';g.style.cssText='position:fixed;inset:0;z-index:99;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:16px';
 g.innerHTML=`<div class="cd" style="max-width:380px;width:100%;text-align:center"><h2>تفعيل التطبيق</h2><p style="color:var(--dg)">${E(i.msg)}</p><p>أدخل كود التفعيل. الكود التجريبي يمنح أسبوعًا واحدًا، ثم يلزم كود اشتراك دائم.</p><input id="gc" dir="ltr" placeholder="XXXX-XXXX-XXXX-XXXX" autocomplete="off"><p id="gm" style="color:var(--dg)"></p><button class="b" style="width:100%" id="gb">تفعيل</button><button class="b g2" style="width:100%;margin-top:8px" id="gx">تصدير نسخة احتياطية من بياناتي</button></div>`;document.body.appendChild(g);
 const go=()=>{try{actv($('#gc').value);g.remove();res()}catch(e){$('#gm').textContent=e.message}};$('#gb').onclick=go;$('#gc').onkeydown=e=>{if(e.key=='Enter')go()};$('#gx').onclick=()=>run(async()=>{await openDB();await load();backup()})})}
+function lbl(){document.querySelectorAll('#main table').forEach(t=>{const h=[...t.rows[0].cells];if(!h.length||h[0].tagName!='TH')return;t.classList.add('rt');[...t.rows].slice(1).forEach(r=>[...r.cells].forEach((c,i)=>c.dataset.l=(h[i]||{}).textContent||''))})}
+document.addEventListener('focusin',e=>{if(e.target.matches('input,select'))setTimeout(()=>e.target.scrollIntoView({block:'center',behavior:'smooth'}),300)});
 // ===== التشغيل =====
 const V={dash:vDash,pos:vPos,products:vProd,sales:vSales,purchases:vPur,customers:()=>vParty('customers'),suppliers:()=>vParty('suppliers'),expenses:vExp,cash:vCash,moves:vMoves,reports:vRep,settings:vSet};
-function go(v){view=v;Q='';render()}
-function render(){if(!licInfo().ok)return location.reload();$('#licst').textContent=licInfo().txt;$('#shopn').textContent='🏪 '+cfg.name;$('#nav').innerHTML=NAV.map(n=>`<a class="${n[0]==view?'on':''}" onclick="go('${n[0]}')">${n[1]}</a>`).join('');$('#main').innerHTML=V[view]();if(view=='pos'){posList();totUp()}}
+function go(v){view=v;Q='';document.querySelector('nav').classList.remove('open');render()}
+function render(){if(!licInfo().ok)return location.reload();$('#licst').textContent=licInfo().txt;$('#shopn').textContent='🏪 '+cfg.name;$('#nav').innerHTML=NAV.map(n=>`<a class="${n[0]==view?'on':''}" onclick="go('${n[0]}')"><i>${NI[n[0]]||'•'}</i><span>${n[1]}</span></a>`).join('');$('#main').innerHTML=V[view]();if(view=='pos'){posList();totUp()}lbl()}
 (async()=>{try{document.documentElement.dataset.t=localStorage.getItem('th')||'light'}catch(e){}
 try{await gate();await openDB();await load();render()}catch(e){$('#main').innerHTML='<p class="em">تعذر فتح التخزين المحلي. جرّب فتح الملف في متصفح آخر أو عبر خادم محلي.<br>'+E(e.message)+'</p>'}})();
 </script></body></html>
